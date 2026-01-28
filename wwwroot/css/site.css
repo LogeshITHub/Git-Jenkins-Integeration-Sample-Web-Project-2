@@ -1,0 +1,220 @@
+/* wwwroot/css/site.css */
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --nav-bg: #f8f9fa;
+  --nav-text: #212529;
+  --primary: #007bff;
+  --primary-dark: #0056b3;
+  --card-bg: #f8f9fa;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --dark-bg: #121212;
+  --dark-text: #e0e0e0;
+  --dark-nav-bg: #1e1e1e;
+  --dark-nav-text: #f1f1f1;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --bg: var(--dark-bg);
+  --text: var(--dark-text);
+  --nav-bg: var(--dark-nav-bg);
+  --nav-text: var(--dark-nav-text);
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* Base styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Layout */
+header {
+  background-color: var(--nav-bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+header nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+header nav a:hover {
+  color: var(--primary);
+}
+
+/* Dark mode nav */
+body.dark-mode header {
+  background-color: var(--dark-nav-bg);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.hero .btn {
+  background-color: white;
+  color: var(--primary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.hero .btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Dark mode hero */
+body.dark-mode .hero {
+  background: linear-gradient(135deg, #0f0f0f, #252525);
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.feature {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px var(--card-shadow);
+  text-align: center;
+}
+.feature h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+.feature p {
+  color: var(--text);
+}
+
+/* Dark mode features */
+body.dark-mode .feature {
+  background-color: #2d2d2d;
+  color: var(--dark-text);
+}
+
+/* Fund cards */
+.fund-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.fund-card {
+  background-color: var(--card-bg);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px var(--card-shadow);
+  transition: transform 0.2s;
+}
+.fund-card:hover {
+  transform: translateY(-5px);
+}
+.fund-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+.fund-card p {
+  margin: 0.5rem 0;
+  color: var(--text);
+}
+.fund-card a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.fund-card a:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode fund cards */
+body.dark-mode .fund-card {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: var(--dark-text);
+}
+
+/* Footer */
+footer {
+  background-color: var(--nav-bg);
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+}
+footer p {
+  margin: 0;
+  color: var(--nav-text);
+  font-size: 0.9rem;
+}
+
+/* Dark mode footer */
+body.dark-mode footer {
+  background-color: var(--dark-nav-bg);
+}
+
+/* Dark mode toggle button */
+#darkModeToggle {
+  background: none;
+  border: none;
+  color: var(--nav-text);
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+#darkModeToggle:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}

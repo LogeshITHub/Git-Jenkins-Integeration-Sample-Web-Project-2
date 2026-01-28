@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Alpha Fund",
+    "category": "Equity",
+    "nav": 100.5,
+    "description": "A diversified equity fund."
+  },
+  {
+    "id": 2,
+    "name": "Beta Fund",
+    "category": "Debt",
+    "nav": 45.2,
+    "description": "Fixed income fund."
+  },
+  {
+    "id": 3,
+    "name": "Gamma Fund",
+    "category": "Hybrid",
+    "nav": 78.75,
+    "description": "Balanced fund."
+  }
+]
